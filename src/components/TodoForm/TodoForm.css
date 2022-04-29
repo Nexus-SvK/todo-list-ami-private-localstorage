@@ -1,0 +1,44 @@
+.todo_form {
+  text-align: end;
+  width: 750px;
+  background-color: purple;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px;
+  margin: 10px 0;
+  padding: 10px 15px;
+}
+
+.input {
+  padding: 0 5px;
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 5px;
+  background-color: #7851a9;
+}
+
+.input_body {
+  padding: 5px;
+  width: 100%;
+  height: 75px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 5px;
+  resize: none;
+  background-color: #7851a9;
+}
+
+.form {
+  margin: 5px 0;
+  text-align: start;
+}
+
+.subbtn {
+  background-color: #7851a9;
+  border: none;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px;
+}

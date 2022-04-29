@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  display: inline;
+}
+
+.check {
+  display: inline;
+}
+
+.head {
+  width: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo {
+  width: 750px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7),
+    -1px -1px 3px rgba(255, 255, 255, 0.1);
+  background-color: white;
+  margin: 15px 0;
+}
+
+.todo_header {
+  display: flex;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7851a9;
+}
+
+.todo_header.opened {
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4),
+    -1px -1px 3px rgba(255, 255, 255, 0.6);
+  transition: 200ms;
+}
+
+.todo_body {
+  height: 50px;
+  background-color: #eaeded;
+  text-align: start;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  resize: vertical;
+  overflow: auto;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4),
+    -1px -1px 3px rgba(255, 255, 255, 0.6);
+  transition: ease-in 200ms;
+}
+
+.todo_body.hidden {
+  height: 0px;
+  display: none;
+  transition: ease-out 200ms;
+}
+
+input[type="checkbox"] {
+  display: none;
+  pointer-events: none;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label svg {
+  width: min-content;
+}
+
+input[type="checkbox"] + label svg .arrow {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+input[type="checkbox"]:checked + label .arrow {
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.reverse .arrow {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
