@@ -7,7 +7,7 @@ const TodoList = (props) => {
     props.del(todoid);
   };
   return (
-    <div className="todo_list">
+    <div className={props.todos.length == 0 ? "todo_list hidden" : "todo_list"}>
       {props.todos.map((todo, i) => (
         <Todo
           key={i}
