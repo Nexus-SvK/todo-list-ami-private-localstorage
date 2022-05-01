@@ -5,13 +5,16 @@ import React, { useState } from "react";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const delTodo = (toids) => {
+    setTodos((todos) => todos.splice(toids, 1));
+  };
   const addTodo = (todoitem) => {
     setTodos([...todos, todoitem]);
   };
   return (
     <div className="App">
       <TodoForm add={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} del={delTodo} />
     </div>
   );
 }
