@@ -5,10 +5,12 @@ const Todo = (props) => {
   const [showBody, setShowBody] = useState(false);
   const [delTodo, setDelTodo] = useState(false);
 
+  // const bodyid = "body" + props.id;
+  // const bodyHandler = document.querySelector(bodyid);
+
   const show = () => {
     setShowBody(!showBody);
   };
-
   const delTodoHandler = () => {
     setDelTodo(!delTodo);
     props.delete(props.id);
@@ -60,7 +62,10 @@ const Todo = (props) => {
           </label>
         </div>
       </div>
-      <div className={showBody ? "todo_body" : "todo_body hidden"}>
+      <div
+        id={"body" + props.id}
+        className={showBody ? "todo_body" : "todo_body hidden"}
+      >
         <pre>{props.body}</pre>
       </div>
     </div>
